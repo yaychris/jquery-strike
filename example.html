@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Strike</title>
+
+  <style type="text/css">
+    ul {
+      list-style: none;
+      font-size: 20px;
+    }
+    span.struck {
+      text-decoration: line-through;
+    }
+    input {
+      vertical-align: middle;
+    }
+  </style>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script> 
+  <script type="text/javascript" src="jquery.strike.js"></script>
+  <script type="text/javascript"> 
+    (function($) {
+      $(function() {
+        $("#list input").click(function() {
+          if($(this).attr("checked")) {
+            $(this).parent().find("label").strike();
+          } else {
+            $(this).parent().find("label").destrike();
+          }
+        });
+      });
+    })(jQuery);
+  </script>
+</head>
+<body>
+  <h1>Fox Mulder&rsquo;s todo list</h1>
+
+  <ul id="list">
+    <li>
+      <input type="checkbox" />
+      <label>Find sister</label>
+    </li>
+    <li>
+      <input type="checkbox" />
+      <label>Stop global alien conspiracy</label>
+    </li>
+    <li>
+      <input type="checkbox" />
+      <label>Defy protocol</label>
+    </li>
+    <li>
+      <input type="checkbox" />
+      <label>Renew Hustler subscription</label>
+    </li>
+    <li>
+      <input type="checkbox" />
+      <label>Apologize to S for drunk-dial</label>
+    </li>
+  </ul>
+</body>
+</html>

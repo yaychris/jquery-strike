@@ -1,0 +1,6 @@
+Proof-of-concept for animating a text strike out.
+
+TODO:
+- make it a proper plugin
+- options
+- allow HTML inside the container
